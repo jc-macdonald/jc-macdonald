@@ -1,32 +1,52 @@
-Hi there, I'm Josh.  I am a quantitative researcher with extensive experience in dynamic modeling, simulation-based parameter estimation, and Bayesian inference. I have led projects in infectious disease dynamics and ecosystem modeling, collaborating with interdisciplinary teams to provide robust data-driven insights. 
+Hi there, I'm Josh.  
+I am a quantitative researcher with a Ph.D. in Mathematics and interdisciplinary experience in structured modeling, simulation-based inference, and data-driven public health applications. My work spans infectious disease dynamics, ecological modeling, and cultural transmission systems, with a focus on reproducibility and actionable analysis.
 
-# Core Skills 
-## Mathematical & Statistical Modeling
-Develop data-driven dynamic and statistical models using nonlinear differential equations and multivariate statistics. Sensitivity & Identifiability analyses, paired with simulation-based parameter estimation techniques.
-## Bayesian Inference & Machine Learning
-Apply variational Bayesian methods, sequential hypothesis testing, and neural posterior estimation to achieve robust parameter inference.
-## Data Analysis & Programming
-Proficient in Python, R, \& MATLAB; experienced in data imputation, clustering, and simulation-based inference.
-## Communication & Collaboration 
-Present complex modeling outcomes through technical reports and seminars to interdisciplinary teams and public health agencies. Work collaboratively with experts across public health, oceanography, and cultural studies to address multifaceted challenges.
+# Core Skills
 
-# Projects
-## Influenza Scenario Modeling 
-Led Johns Hopkins contributions to the influenza scenario modelinghub.  Implmeneted and calibrated influenza models for all 50 US states and wahsingtion D.C. using FlepiMoP and hierarchical Bayesian inference.  
-## Cultral Evolution in Austronesia 
-Employed a Bayesian PCA framework with sequential hypothesis testing to objectively determine significant dimensions in high-dimensional cultural datasets, facilitating reconstruction of cultural transmission networks among Austronesian-speaking peoples.
-(See: Macdonald et al., [2024c](https://doi.org/10.1086/730703), [2024e](https://doi.org/10.48550/arXiv.2409.12129))
-## FMDV Transmission Dynamics
-Formulated within-host models linking viral replication and immune responses to predict FMDV transmission dynamics in African buffalo. Simulation-based identifiability techniques ensured robust parameter estimation. 
-(See: Macdonald et al., [2024d](https://doi.org/10.1086/730703))
-## Aquatic Ecosystem Analysis
-Extended classical Nutrient-Phytoplankton-Zooplankton-Detritus (NPZD) models by incorporating non-trophic interactions, applying bifurcation analysis to identify critical thresholds for harmful algal blooms. 
+## Mathematical & Statistical Modeling  
+Develop and analyze structured dynamic models using nonlinear ODEs and multivariate statistics. Apply simulation-based parameter estimation, identifiability diagnostics, and sensitivity analysis (Sobol, PRCC, Morris) to support model calibration and robustness.
+
+## Bayesian Inference & Model Fitting  
+Use hierarchical Bayesian methods (PyMC), posterior predictive checks, and profile likelihood techniques for parameter inference. Integrate model-fitting pipelines with reproducibility and visual diagnostics.
+
+## Programming & Data Analysis  
+Proficient in Python and MATLAB; beginner-level in Julia. Experienced in simulation-based workflows, data preprocessing, and model calibration with applications in viral kinetics and ecosystem dynamics.
+
+## Communication & Collaboration  
+Collaborate with interdisciplinary teams in public health, biology, and cultural research. Communicate modeling outcomes through technical reports, stakeholder briefs, and invited talks.
+
+# Selected Projects
+
+## H5N1 Transmission Risk Modeling (Current)  
+Contributing to zoonotic influenza modeling in California dairy systems. Developed network-structured viral immune kinetics models and automated relevance pipelines to support intervention planning.
+
+## Influenza Scenario Modeling (CDC Flu Hub)  
+Contributed to Johns Hopkins/ACCIDDA team’s CDC-funded seasonal flu scenario modeling. Ran nationwide simulations using flepimop and hierarchical Bayesian calibration tools across U.S. states.
+
+## Cultural Evolution in Austronesia  
+Applied Bayesian PCA and hypothesis testing to identify meaningful dimensions in high-dimensional cultural datasets. Reconstructed cultural transmission networks among Austronesian-speaking societies.  
+(See: Macdonald et al., [2024](https://doi.org/10.48550/arXiv.2409.12129))
+
+## FMDV Viral Dynamics & Transmission  
+Analyzed within-host viral kinetics and immune responses to estimate transmissibility of FMDV in African buffalo. Applied profile likelihood and simulation-based identifiability techniques.  
+(See: Macdonald et al., [2024](https://doi.org/10.1086/730703))
+
+## NPZD Ecosystem Modeling  
+Extended classical NPZD models to include bloom-forming toxicity and non-trophic feedbacks. Performed bifurcation and resilience analysis to identify tipping points in aquatic ecosystems.  
 (See: Macdonald & Gulbudak, [2023](https://doi.org/10.1007/s00285-023-01969-7))
-## COVID-19 Outbreak Modeling
-Developed dynamic epidemic models integrating testing-dependent ascertainment rates to estimate key parameters such as lockdown initiation and relaxation rates. These models revealed an inverse relationship between outbreak size and safety measure adherence turnover rate. (See: Browne, Gulbudak, & Macdonald, [2022](https://doi.org/10.1016/j.jtbi.2021.110919); Macdonald, Browne, & Gulbudak, [2021](https://doi.org/10.1098/rsos.210227).)
 
-# Programming Samples (MATLAB & Python)
-- Macdonald, J. C. et al. (2025) [ACCIDDA-flepiMoP Influenza Scenario Model](https://github.com/midas-network/flu-scenario-modeling-hub) *GitHub*. 
-- Macdonald, J. C., et al. (2024a). [Software for Within-host viral growth and immune response rates predict FMDV transmission dynamics for African Buffalo](https://zenodo.org/records/10720079). *Zenodo*. 
-- Macdonald, J. C., et al. (2024b). [Software for Cultural Transmission, Networks, and Clusters among Austronesian-speaking Peoples](https://zenodo.org/records/13798914). *Zenodo*. 
+## COVID-19 Outbreak Dynamics  
+Modeled nonlinear behavior-modulated COVID-19 outbreaks under testing-dependent ascertainment and lockdown fatigue.  
+(See: Macdonald et al., [2021](https://doi.org/10.1098/rsos.210227))
+
+# Reproducible Code & Software
+
+- **Influenza Scenario Modeling with flepimop**  
+  [GitHub: ACCIDDA-JHU seasonal flu model](https://github.com/midas-network/flu-scenario-modeling-hub)
+
+- **FMDV Immune-Viral Dynamics Toolkit**  
+  [Zenodo: FMDV transmission model software](https://zenodo.org/records/10720079)
+
+- **Cultural Network Analysis Tools**  
+  [Zenodo: Austronesian cultural transmission analysis](https://zenodo.org/records/13798914)
 
