@@ -4,24 +4,24 @@ I am a quantitative researcher with a Ph.D. in Mathematics and interdisciplinary
 # Core Skills
 
 ## Mathematical & Statistical Modeling  
-Develop and analyze structured dynamic models using nonlinear ODEs and multivariate statistics. Apply simulation-based parameter estimation, identifiability diagnostics, and sensitivity analysis (Sobol, PRCC, Morris) to support model calibration and robustness.
+Develop and analyze structured dynamic models using nonlinear ODEs, PDEs, and multivariate statistics. Apply simulation-based parameter estimation, identifiability diagnostics, and sensitivity analysis (Sobol, PRCC, Morris) to support model calibration and robustness.
 
 ## Bayesian Inference & Model Fitting  
-Use hierarchical Bayesian methods (PyMC), posterior predictive checks, and profile likelihood techniques for parameter inference. Integrate model-fitting pipelines with reproducibility and visual diagnostics.
+Use hierarchical Bayesian methods, posterior predictive checks, and profile likelihood techniques for parameter inference. Integrate model-fitting pipelines with reproducibility and visual diagnostics.
 
 ## Programming & Data Analysis  
-Proficient in Python and MATLAB; beginner-level in Julia. Experienced in simulation-based workflows, data preprocessing, and model calibration with applications in viral kinetics and ecosystem dynamics.
+Proficient in Python and MATLAB; beginner-level in Julia. Experienced in simulation-based workflows, data preprocessing, and model calibration with applications in viral kinetics, epidemology, and oceanogrpahic dynamics.
 
 ## Communication & Collaboration  
-Collaborate with interdisciplinary teams in public health, biology, and cultural research. Communicate modeling outcomes through technical reports, stakeholder briefs, and invited talks.
+Collaborate with interdisciplinary teams in public health, biology, oceanography, and cultural research. Communicate modeling outcomes through technical reports, stakeholder briefs, and invited talks.
 
 # Selected Projects
 
-## H5N1 Transmission Risk Modeling (Current)  
-Contributing to zoonotic influenza modeling in California dairy systems. Developed network-structured viral immune kinetics models and automated relevance pipelines to support intervention planning.
+## FlepiMoP backend upgrade (Current)  
+Ongoing [refactor and vectorizaion](https://github.com/HopkinsIDD/flepiMoP/pull/592) of [flepiMoP](https://www.flepimop.org) solver logic, inference, outcome, and scenario generation logic.  Results so far result in anywhere from 5x to 20x speedups depending on model structure.  Also working to add well integrated forecasting capablities.
 
-## Influenza Scenario Modeling (CDC Flu Hub)  
-Contributed to Johns Hopkins/ACCIDDA team’s CDC-funded seasonal flu scenario modeling. Ran nationwide simulations using flepimop and hierarchical Bayesian calibration tools across U.S. states.
+## Influenza Scenario & Forecast Modeling (CDC Flu Hub, Current)  
+Led Johns Hopkins/ACCIDDA team’s CDC-funded seasonal flu scenario modeling in 2024 and 2025. Ran nationwide simulations using flepimop and hierarchical Bayesian calibration tools across U.S. states.  Will be leading ACCIDDA 2025/26 season forecasting efforts. 
 
 ## Cultural Evolution in Austronesia  
 Applied Bayesian PCA and hypothesis testing to identify meaningful dimensions in high-dimensional cultural datasets. Reconstructed cultural transmission networks among Austronesian-speaking societies.  
