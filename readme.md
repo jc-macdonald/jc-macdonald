@@ -18,10 +18,10 @@ Collaborate with interdisciplinary teams in public health, biology, oceanography
 # Selected Projects
 
 ## FlepiMoP backend upgrade (Current)  
-Ongoing [refactor and vectorizaion](https://github.com/HopkinsIDD/flepiMoP/pull/592) of [flepiMoP](https://www.flepimop.org) solver logic, inference, outcome, and scenario generation logic.  Results so far result in anywhere from 5x to 20x speedups depending on model structure.  Also working to add well integrated forecasting capablities.
+Ongoing [refactor and vectorizaion](https://github.com/HopkinsIDD/flepiMoP/pull/592) of [flepiMoP](https://www.flepimop.org) solver logic, inference, outcome, and scenario generation logic.  Results so far result in anywhere from *5x to 20x speedups* depending on model structure.  Also working to add well integrated forecasting capablities.
 
 ## Influenza Scenario & Forecast Modeling (CDC Flu Hub, Current)  
-Led Johns Hopkins/ACCIDDA team’s CDC-funded seasonal flu scenario modeling in 2024 and 2025. Ran nationwide simulations using flepimop and hierarchical Bayesian calibration tools across U.S. states.  Will be leading ACCIDDA 2025/26 season forecasting efforts. 
+Led Johns Hopkins/ACCIDDA team’s CDC-funded seasonal [flu scenario modeling](https://github.com/midas-network/flu-scenario-modeling-hub) in 2024 and 2025. Ran nationwide simulations using flepimop and hierarchical Bayesian calibration tools across U.S. states.  Will be leading ACCIDDA 2025/26 season FlepiMoP [forecasting](https://github.com/cdcepi/FluSight-forecast-hub) efforts. 
 
 ## Cultural Evolution in Austronesia  
 Applied Bayesian PCA and hypothesis testing to identify meaningful dimensions in high-dimensional cultural datasets. Reconstructed cultural transmission networks among Austronesian-speaking societies.  
