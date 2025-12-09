@@ -11,7 +11,7 @@ Develop and analyze structured dynamic models using nonlinear ODEs, PDEs, and mu
 Use hierarchical Bayesian methods, posterior predictive checks, and profile likelihood techniques for parameter inference. Integrate model-fitting pipelines with reproducibility and visual diagnostics.
 
 ## Programming & Computational Methods  
-Build high-performance scientific computing pipelines with Python (NumPy, SciPy, Numba), Bayesian inference frameworks (PyMC), and scalable data workflows. Experienced in vectorizing simulators, benchmarking solvers, and designing reproducible model-fitting pipelines. Beginner-level Julia for PDE/ODE simulation. Applications span epidemiology, viral kinetics, and oceanographic dynamics.
+Build high-performance scientific computing pipelines with Python, Bayesian inference frameworks, and scalable data workflows. Experienced in vectorizing simulators, benchmarking solvers, and designing reproducible model-fitting pipelines. Beginner-level Julia for PDE/ODE simulation. Applications span epidemiology, viral kinetics, and oceanographic dynamics.
 
 ## Communication & Collaboration  
 Collaborate with interdisciplinary teams in public health, biology, oceanography, and cultural research. Communicate modeling outcomes through technical reports, stakeholder briefs, and invited talks.
