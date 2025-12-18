@@ -1,5 +1,7 @@
-Hi, I’m Josh.  
 **Structure-aware data science and scientific inference for environmental and public health systems.**
+
+
+Hi, I’m Josh.  
 
 I design and implement computational inference systems that integrate mechanistic structure with sparse, heterogeneous data. My work focuses on building **diagnostic-first, reduced-order modeling pipelines**—from numerical solvers to forecasting and scenario evaluation—that remain interpretable, stable, and decision-relevant under real-world constraints.
 
