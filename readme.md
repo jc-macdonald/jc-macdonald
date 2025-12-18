@@ -1,4 +1,4 @@
-**Structure-aware data science and scientific inference for environmental and public health systems.**
+# **Structure-aware data science and scientific inference for environmental and public health systems.**
 
 
 Hi, I’m Josh.  
