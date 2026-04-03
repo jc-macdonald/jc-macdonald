@@ -17,10 +17,10 @@ Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/
 Operator-partitioned numerical solver for mechanistic scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
 
 ## [op_system](https://github.com/ACCIDDA/op_system)
-Declarative RHS specification compiler. Transforms structured YAML model definitions into callable numerical right-hand sides consumed by op_engine.
+Declarative governing equation specification compiler. Designed particualrly for structured dynaimcal systems eg. age structured edpicdemic models or size structured plankton models.  Transforms structured YAML model definitions into callable numerics consumed by op_engine or other differential equations solvers.  Designed to remove mistakes in bookeeping and reduce the barrier to simulation of complex models.
 
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2)
-Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting workflows.
+Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
 
 ---
 
@@ -51,8 +51,8 @@ Benchmarking the [FlepiMoP](https://www.flepimop.org) backend ([5×–20× speed
 ## VBPCApy Convergence Characterization (Current)
 Developing formal convergence guarantees for variational Bayesian PCA: closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
 
-## Influenza Scenario & Forecast Modeling (CDC Flu Hub)
-Led Johns Hopkins/ACCIDDA's CDC-funded seasonal influenza scenario modeling (2024–2025) and forecasting (2025–2026). Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making.
+## Influenza Scenario Modeling (JHU/UNC Flu Hub)
+Led Johns Hopkins/ACCIDDA's JHU/UNC-led seasonal influenza scenario modeling in 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making.  Leading scientific overhaul of ACCIDDA's flu model in advance of the 2026/27 season sceanrio round. These scenarios are used in part to help set influenza vaccination policy. 
 
 ## Cultural Evolution and Human–Environment Systems
 Applied Bayesian PCA, structured distance representations, and network diagnostics to identify dominant transmission pathways in high-dimensional cultural datasets under severe observational constraint.
