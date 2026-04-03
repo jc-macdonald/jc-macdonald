@@ -1,66 +1,71 @@
-# **Structure-aware data science and scientific inference for environmental and public health systems.**
+# **Principled inference and simulation methods for scientific systems under partial observability.**
 
+Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
 
-Hi, I’m Josh.  
+I build computational methods and software for scientific modeling problems where the full system state is never directly observed. My work spans **Bayesian inference**, **numerical solver design**, and **model evaluation**, with a focus on formal guarantees: convergence proofs, proper scoring, calibration diagnostics, and Pareto-optimal tradeoffs between fidelity and computational cost.
 
-I design and implement computational inference systems that integrate mechanistic structure with sparse, heterogeneous data. My work focuses on building **diagnostic-first, reduced-order modeling pipelines**—from numerical solvers to forecasting and scenario evaluation—that remain interpretable, stable, and decision-relevant under real-world constraints.
+Applications include infectious disease forecasting, marine ecosystem dynamics, cultural transmission, and pharmacometrics.
 
-Applications include infectious disease dynamics, environmental and ecological systems, and human–environment interactions, with an emphasis on reproducibility, numerical discipline, and operational reliability.
+---
+
+# Active Software
+
+## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
+Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
+
+## [op_engine](https://github.com/ACCIDDA/op_engine)
+Operator-partitioned numerical solver for mechanistic scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
+
+## [op_system](https://github.com/ACCIDDA/op_system)
+Declarative RHS specification compiler. Transforms structured YAML model definitions into callable numerical right-hand sides consumed by op_engine.
+
+## [flepimop2](https://github.com/ACCIDDA/flepimop2)
+Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting workflows.
 
 ---
 
 # Core Skills
 
-## Structured Mathematical & Statistical Modeling  
+## Structured Mathematical & Statistical Modeling
 Develop and analyze mechanistic and hybrid models using nonlinear ODEs, PDEs, and structured stochastic systems. Emphasis on identifying **diagnostically meaningful summaries**, stability properties, and regime behavior rather than full latent-state reconstruction. Apply simulation-based inference, identifiability diagnostics, and global sensitivity analysis (Sobol, PRCC, Morris).
 
-## Bayesian Inference & Identifiability  
-Design inference targets and likelihood structures aligned with partial observability. Use hierarchical Bayesian models, profile likelihood, posterior predictive checks, and simulation-based identifiability analysis to support robust parameter estimation and uncertainty quantification.
+## Bayesian Inference & Identifiability
+Design inference targets and likelihood structures aligned with partial observability. Use hierarchical Bayesian models, variational inference, profile likelihood, posterior predictive checks, and simulation-based identifiability analysis to support robust parameter estimation and uncertainty quantification.
 
-## Scientific Computing & Inference Pipelines  
-Build high-performance, reproducible scientific computing systems in Python, integrating mechanistic simulators with inference and forecasting workflows. Experience includes solver benchmarking, vectorization, scalable scenario generation, and disciplined software engineering practices (testing, CI, modular design). Working knowledge of Julia for ODE/PDE simulation.
+## Scientific Computing & Numerical Methods
+Build high-performance, reproducible scientific computing systems in Python and Julia. Experience includes ODE/PDE solver design and benchmarking, operator splitting (IMEX), vectorization, scalable scenario generation, and disciplined software engineering practices (testing, CI/CD, modular design, type-checked codebases).
 
-## Forecasting, Scenarios, and Evaluation  
-Develop reduced-order forecasting and scenario models that enforce scientific constraints by construction. Design evaluation and grading tools that diagnose drift, instability, and structural incoherence beyond accuracy-based metrics, informed by operational public health forecasting experience.
+## Forecasting, Evaluation, and Model Criticism
+Develop reduced-order forecasting and scenario models that enforce scientific constraints by construction. Design evaluation tools using proper scoring rules, calibration diagnostics, and Pareto front analysis to assess fidelity-vs-cost tradeoffs beyond point-accuracy metrics.
 
-## Collaboration & Communication  
+## Collaboration & Communication
 Collaborate across public health, ecology, environmental science, and the social sciences. Communicate results through technical manuscripts, stakeholder-facing briefs, and interdisciplinary presentations, with a focus on interpretability and decision relevance.
 
 ---
 
 # Selected Projects
 
-## FlepiMoP Backend Upgrade (Current)  
-Leading a major [refactor and vectorization](https://github.com/HopkinsIDD/flepiMoP/pull/592) of the [FlepiMoP](https://www.flepimop.org) solver, inference, and scenario-generation backend. Work includes redesigning internal representations to improve numerical stability and scalability. Current results deliver **5×–20× speedups** depending on model structure and enable integrated scenario workflows, with forecasting deployment underway.
+## Operator-Partitioned Solver Ecosystem (Current)
+Benchmarking the [FlepiMoP](https://www.flepimop.org) backend ([5×–20× speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592)) revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_engine](https://github.com/ACCIDDA/op_engine) + [op_system](https://github.com/ACCIDDA/op_system) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a modular, operator-partitioned simulation platform now supporting CDC-funded influenza forecasting.
 
-## Influenza Scenario & Forecast Modeling (CDC Flu Hub, Current)  
-Lead modeler for Johns Hopkins/ACCIDDA’s CDC-funded seasonal influenza scenario modeling efforts (2024–2025), and incoming lead for 2025–2026 forecasting. Ran nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states. This work informs real-time public health decision-making under deep uncertainty.
+## VBPCApy Convergence Characterization (Current)
+Developing formal convergence guarantees for variational Bayesian PCA: closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
 
-## Cultural Evolution and Human–Environment Systems  
-Applied Bayesian PCA, structured distance representations, and network diagnostics to identify dominant transmission pathways in high-dimensional cultural datasets. Focused on inference under severe observational constraint without reconstructing latent histories.  
+## Influenza Scenario & Forecast Modeling (CDC Flu Hub)
+Led Johns Hopkins/ACCIDDA's CDC-funded seasonal influenza scenario modeling (2024–2025) and forecasting (2025–2026). Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making.
+
+## Cultural Evolution and Human–Environment Systems
+Applied Bayesian PCA, structured distance representations, and network diagnostics to identify dominant transmission pathways in high-dimensional cultural datasets under severe observational constraint.
 (See: Macdonald et al., [2024](https://doi.org/10.48550/arXiv.2409.12129))
 
-## Within-Host Viral Dynamics and Spillover Risk (FMDV)  
-Developed and fit mechanistic viral–immune models to experimental infection data in African buffalo to infer transmission-relevant diagnostics. Applied profile likelihood and simulation-based identifiability analysis to quantify uncertainty under partial observability.  
+## Within-Host Viral Dynamics and Spillover Risk (FMDV)
+Developed mechanistic viral–immune models for experimental infection data in African buffalo. Applied profile likelihood and simulation-based identifiability analysis to quantify uncertainty under partial observability.
 (See: Macdonald et al., [2024](https://doi.org/10.1086/730703))
 
-## Trait-Structured NPZD Ecosystem Modeling  
-Extended classical NPZD models to incorporate toxicity-mediated feedbacks and non-trophic interactions. Performed bifurcation and resilience analyses to identify regime shifts and persistence margins relevant to ecosystem monitoring and exposure pathways.  
+## Trait-Structured NPZD Ecosystem Modeling
+Extended classical NPZD models with toxicity-mediated feedbacks and non-trophic interactions. Bifurcation and resilience analyses to identify regime shifts and persistence margins.
 (See: Macdonald & Gulbudak, [2023](https://doi.org/10.1007/s00285-023-01969-7))
 
-## COVID-19 Outbreak Dynamics  
-Modeled behaviorally mediated COVID-19 transmission under testing-dependent ascertainment and intervention fatigue, highlighting structural sources of forecast instability.  
+## COVID-19 Outbreak Dynamics
+Modeled behaviorally mediated COVID-19 transmission under testing-dependent ascertainment and intervention fatigue.
 (See: Macdonald et al., [2021](https://doi.org/10.1098/rsos.210227))
-
----
-
-# Reproducible Software & Data Products
-
-- **Influenza Scenario Modeling with FlepiMoP**  
-  [ACCIDDA-JHU Seasonal Flu Model](https://github.com/midas-network/flu-scenario-modeling-hub)
-
-- **FMDV Viral–Immune Dynamics Toolkit**  
-  [Zenodo: FMDV Transmission Model Software](https://zenodo.org/records/10720079)
-
-- **Cultural Network Analysis Tools**  
-  [Zenodo: Austronesian Cultural Transmission Analysis](https://zenodo.org/records/13798914)
