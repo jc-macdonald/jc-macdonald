@@ -68,9 +68,13 @@ Developing formal convergence guarantees for variational Bayesian PCA: closed-fo
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jc-macdonald&layout=compact&theme=default&hide_border=true&langs_count=10" alt="Top Languages" />
-</p>
+<table align="center">
+<tr><th colspan="2">Languages & Tools</th></tr>
+<tr><td><b>Primary</b></td><td>Python · C++ · MATLAB/Octave</td></tr>
+<tr><td><b>Secondary</b></td><td>Julia · R · Bash</td></tr>
+<tr><td><b>Scientific</b></td><td>NumPy · SciPy · Cython · pybind11 · Numba</td></tr>
+<tr><td><b>Infrastructure</b></td><td>GitHub Actions · Docker · pytest · pre-commit</td></tr>
+</table>
 
 <p align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jc-macdonald&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&hide_rank=true" alt="GitHub Stats" />
