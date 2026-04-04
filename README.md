@@ -2,9 +2,9 @@
 
 Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
 
-I build computational methods and software for scientific modeling problems where the full system state is never directly observed. My work spans **Bayesian inference**, **numerical solver design**, and **model evaluation**, with a focus on formal guarantees: convergence proofs, proper scoring, calibration diagnostics, and Pareto-optimal tradeoffs between fidelity and computational cost.
+I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences. My work integrates **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation** — because prediction alone is not enough; scientific inference must be defensible under what's hidden.
 
-Applications include infectious disease forecasting, marine ecosystem dynamics, and pharmacometrics.
+Applications include infectious disease forecasting, marine and terrestrial ecology, environmental hazards, and cultural transmission dynamics.
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/)
 
@@ -16,7 +16,7 @@ Applications include infectious disease forecasting, marine ecosystem dynamics, 
 Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
 
 ## [op_engine](https://github.com/ACCIDDA/op_engine)
-Operator-partitioned numerical solver for mechanistic scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
+Operator-partitioned numerical solver for generative scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
 
 ## [op_system](https://github.com/ACCIDDA/op_system)
 Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
@@ -56,7 +56,7 @@ Developing formal convergence guarantees for variational Bayesian PCA: closed-fo
 
 # Expertise
 
-**Modeling** · Mechanistic ODEs/PDEs, structured stochastic systems, stability and bifurcation analysis, simulation-based inference, global sensitivity analysis (Sobol, PRCC, Morris)
+**Modeling** · Generative models (ODE/PDE/stochastic/hybrid), scientific AI/ML (physics-embedded surrogates, lawful learning), stability and bifurcation analysis, simulation-based inference, global sensitivity analysis (Sobol, PRCC, Morris)
 
 **Inference** · Hierarchical Bayesian models, variational inference, profile likelihood, posterior predictive checks, identifiability analysis, uncertainty quantification
 
