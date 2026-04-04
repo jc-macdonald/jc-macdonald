@@ -73,10 +73,10 @@ Modeled behaviorally mediated COVID-19 transmission under testing-dependent asce
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jc-macdonald&layout=compact&theme=default&hide_border=true&langs_count=10" alt="Top Languages" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jc-macdonald&layout=compact&theme=default&hide_border=true&langs_count=10" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jc-macdonald&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&hide_rank=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jc-macdonald&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&hide_title=true&hide_rank=true" alt="GitHub Stats" />
   <img src="https://github-readme-streak-stats.herokuapp.com?user=jc-macdonald&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" />
 </p>
