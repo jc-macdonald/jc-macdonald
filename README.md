@@ -6,6 +6,8 @@ I build computational methods and software for scientific modeling problems wher
 
 Applications include infectious disease forecasting, marine ecosystem dynamics, cultural transmission, and pharmacometrics.
 
+🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/)
+
 ---
 
 # Active Software
@@ -17,29 +19,10 @@ Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/
 Operator-partitioned numerical solver for mechanistic scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
 
 ## [op_system](https://github.com/ACCIDDA/op_system)
-Declarative governing equation specification compiler. Designed particularly for structured dynamical systems, e.g., age-structured epidemic models or size-structured plankton models. Transforms structured YAML model definitions into callable numerics consumed by op_engine or other differential equation solvers. Designed to eliminate bookkeeping errors and reduce the barrier to simulation of complex models.
+Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
 
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2)
 Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
-
----
-
-# Core Skills
-
-## Structured Mathematical & Statistical Modeling
-Develop and analyze mechanistic and hybrid models using nonlinear ODEs, PDEs, and structured stochastic systems. Emphasis on identifying **diagnostically meaningful summaries**, stability properties, and regime behavior rather than full latent-state reconstruction. Apply simulation-based inference, identifiability diagnostics, and global sensitivity analysis (Sobol, PRCC, Morris).
-
-## Bayesian Inference & Identifiability
-Design inference targets and likelihood structures aligned with partial observability. Use hierarchical Bayesian models, variational inference, profile likelihood, posterior predictive checks, and simulation-based identifiability analysis to support robust parameter estimation and uncertainty quantification.
-
-## Scientific Computing & Numerical Methods
-Build high-performance, reproducible scientific computing systems in Python and Julia. Experience includes ODE/PDE solver design and benchmarking, operator splitting (IMEX), vectorization, scalable scenario generation, and disciplined software engineering practices (testing, CI/CD, modular design, type-checked codebases).
-
-## Forecasting, Evaluation, and Model Criticism
-Develop reduced-order forecasting and scenario models that enforce scientific constraints by construction. Design evaluation tools using proper scoring rules, calibration diagnostics, and Pareto front analysis to assess fidelity-vs-cost tradeoffs beyond point-accuracy metrics.
-
-## Collaboration & Communication
-Collaborate across public health, ecology, environmental science, and the social sciences. Communicate results through technical manuscripts, stakeholder-facing briefs, and interdisciplinary presentations, with a focus on interpretability and decision relevance.
 
 ---
 
@@ -51,8 +34,11 @@ Benchmarking the [FlepiMoP](https://www.flepimop.org) backend ([5×–20× speed
 ## VBPCApy Convergence Characterization (Current)
 Developing formal convergence guarantees for variational Bayesian PCA: closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
 
-## Influenza Scenario Modeling (JHU/UNC Flu Hub)
-Led Johns Hopkins/ACCIDDA's JHU/UNC-led seasonal influenza scenario modeling in 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making.  Leading scientific overhaul of ACCIDDA's flu model in advance of the 2026/27 season scenario round. These scenarios are used in part to help set influenza vaccination policy.
+## Influenza Scenario Modeling (JHU/UNC Flu Hub, Current)
+Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making. Leading scientific overhaul in advance of the 2026/27 season. These scenarios are used in part to help set influenza vaccination policy.
+
+## Hib Vaccination Modeling (Navajo Nation, Current)
+Technical lead supervising implementation of an age- and immune-status-structured Hib model for the Navajo Nation to evaluate the impact of long-running vaccination programs.
 
 ## Cultural Evolution and Human–Environment Systems
 Applied Bayesian PCA, structured distance representations, and network diagnostics to identify dominant transmission pathways in high-dimensional cultural datasets under severe observational constraint.
@@ -67,18 +53,19 @@ Extended classical NPZD models with toxicity-mediated feedbacks and non-trophic 
 (See: Macdonald & Gulbudak, [2023](https://doi.org/10.1007/s00285-023-01969-7))
 
 ## COVID-19 Outbreak Dynamics
-Modeled behaviorally mediated COVID-19 transmission under testing-dependent ascertainment and intervention fatigue.
+Modeled behaviorally mediated COVID-19 transmission under testing-dependent ascertainment and intervention fatigue. Also contributed data cleaning and assimilation for ACCIDDA's health heterogeneities COVID-19 scenario round (2025).
 (See: Macdonald et al., [2021](https://doi.org/10.1098/rsos.210227))
 
 ---
 
-# Operational Modeling
+# Expertise
 
-## Hib Vaccination Modeling (Navajo Nation, Current)
-Technical supervisor managing PhD students in implementation of an age- and immune-status-structured Hib model for the Navajo Nation to evaluate the impact of long-running vaccination programs.
+**Modeling** · Mechanistic ODEs/PDEs, structured stochastic systems, stability and bifurcation analysis, simulation-based inference, global sensitivity analysis (Sobol, PRCC, Morris)
 
-## Influenza Scenario Modeling (JHU/UNC Flu Hub, Current)
-Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making. Leading scientific overhaul of ACCIDDA's flu model in advance of the 2026/27 season scenario round. These scenarios are used in part to help set influenza vaccination policy.
+**Inference** · Hierarchical Bayesian models, variational inference, profile likelihood, posterior predictive checks, identifiability analysis, uncertainty quantification
 
-## COVID-19 Scenario Modeling Hub (2025)
-Data cleaning and assimilation in support of ACCIDDA's health heterogeneities COVID-19 round.
+**Computing** · Python, Julia, C++; ODE/PDE solver design and benchmarking, operator splitting (IMEX), vectorization, CI/CD, type-checked codebases
+
+**Evaluation** · Proper scoring rules, calibration diagnostics, Pareto front analysis, reduced-order forecasting models with scientific constraints by construction
+
+*Full details: [jcmacdonald.dev/cv](https://jcmacdonald.dev/cv/)*
