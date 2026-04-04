@@ -4,13 +4,13 @@ Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins
 
 I build computational methods and software for scientific modeling problems where the full system state is never directly observed. My work spans **Bayesian inference**, **numerical solver design**, and **model evaluation**, with a focus on formal guarantees: convergence proofs, proper scoring, calibration diagnostics, and Pareto-optimal tradeoffs between fidelity and computational cost.
 
-Applications include infectious disease forecasting, marine ecosystem dynamics, cultural transmission, and pharmacometrics.
+Applications include infectious disease forecasting, marine ecosystem dynamics, and pharmacometrics.
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/)
 
 ---
 
-# Active Software
+# Software — Primary Architect
 
 ## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
 Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
@@ -24,15 +24,17 @@ Declarative governing equation specification compiler for structured dynamical s
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2)
 Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
 
+# Software — Contributor
+
+## [FlepiMoP](https://github.com/HopkinsIDD/flepiMoP)
+Flexible Pipeline for Modeling Pathogens. Contributed [5×–20× runtime speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592) to the simulation backend through profiling-driven optimization.
+
+## [Flu Scenario Modeling Hub](https://github.com/midas-network/flu-scenario-modeling-hub)
+MIDAS Network coordination hub for CDC-funded influenza scenario modeling. Contributing team lead submissions and model evaluation infrastructure.
+
 ---
 
-# Selected Projects
-
-## Operator-Partitioned Solver Ecosystem (Current)
-Benchmarking the [FlepiMoP](https://www.flepimop.org) backend ([5×–20× speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592)) revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_engine](https://github.com/ACCIDDA/op_engine) + [op_system](https://github.com/ACCIDDA/op_system) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a modular, operator-partitioned simulation platform now supporting CDC-funded influenza forecasting.
-
-## VBPCApy Convergence Characterization (Current)
-Developing formal convergence guarantees for variational Bayesian PCA: closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
+# Operational Modeling
 
 ## Influenza Scenario Modeling (JHU/UNC Flu Hub, Current)
 Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making. Leading scientific overhaul in advance of the 2026/27 season. These scenarios are used in part to help set influenza vaccination policy.
@@ -40,21 +42,15 @@ Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeli
 ## Hib Vaccination Modeling (Navajo Nation, Current)
 Technical lead supervising implementation of an age- and immune-status-structured Hib model for the Navajo Nation to evaluate the impact of long-running vaccination programs.
 
-## Cultural Evolution and Human–Environment Systems
-Applied Bayesian PCA, structured distance representations, and network diagnostics to identify dominant transmission pathways in high-dimensional cultural datasets under severe observational constraint.
-(See: Macdonald et al., [2024](https://doi.org/10.48550/arXiv.2409.12129))
+---
 
-## Within-Host Viral Dynamics and Spillover Risk (FMDV)
-Developed mechanistic viral–immune models for experimental infection data in African buffalo. Applied profile likelihood and simulation-based identifiability analysis to quantify uncertainty under partial observability.
-(See: Macdonald et al., [2024](https://doi.org/10.1086/730703))
+# Research
 
-## Trait-Structured NPZD Ecosystem Modeling
-Extended classical NPZD models with toxicity-mediated feedbacks and non-trophic interactions. Bifurcation and resilience analyses to identify regime shifts and persistence margins.
-(See: Macdonald & Gulbudak, [2023](https://doi.org/10.1007/s00285-023-01969-7))
+## Operator-Partitioned Solver Ecosystem (Current)
+Benchmarking the [FlepiMoP](https://www.flepimop.org) backend revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_engine](https://github.com/ACCIDDA/op_engine) + [op_system](https://github.com/ACCIDDA/op_system) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a modular, operator-partitioned simulation platform now supporting CDC-funded influenza forecasting.
 
-## COVID-19 Outbreak Dynamics
-Modeled behaviorally mediated COVID-19 transmission under testing-dependent ascertainment and intervention fatigue. Also contributed data cleaning and assimilation for ACCIDDA's health heterogeneities COVID-19 scenario round (2025).
-(See: Macdonald et al., [2021](https://doi.org/10.1098/rsos.210227))
+## VBPCApy Convergence Characterization (Current)
+Developing formal convergence guarantees for variational Bayesian PCA: closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
 
 ---
 
