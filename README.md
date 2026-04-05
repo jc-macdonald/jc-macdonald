@@ -1,12 +1,12 @@
-# **Principled inference and simulation methods for scientific systems under partial observability.**
+# **Principled inference and decision support for scientific systems under partial observability.**
 
 Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
 
-I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences. My work integrates **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation** — because prediction alone is not enough; scientific inference must be defensible under what's hidden.
+I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences. My work integrates **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation** — because prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
 
-Applications include infectious disease forecasting, marine and terrestrial ecology, environmental hazards, and cultural transmission dynamics.
+Applications include infectious disease forecasting and decision support, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics.
 
-🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/)
+🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
 ---
 
@@ -23,6 +23,12 @@ Declarative governing equation specification compiler for structured dynamical s
 
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2)
 Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
+
+## [model-criticism](https://github.com/jcm-sci/model-criticism)
+Observable-based model evaluation framework with proper scoring rules, Pareto optimization, and Bayesian stacking for simulation studies. Determines whether a model deserves the decisions built on it.
+
+## [pp-eigentest](https://github.com/jcm-sci/pp-eigentest)
+Posterior predictive eigenvalue testing for signal rank determination in covariance and Gram matrices. Supports ordered hypothesis testing with FWER and FDR control.
 
 # Software — Contributor
 
