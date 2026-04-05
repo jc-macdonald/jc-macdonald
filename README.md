@@ -46,7 +46,7 @@ MIDAS Network coordination hub for CDC-funded influenza scenario modeling. Contr
 # Operational Modeling
 
 ## Influenza Scenario Modeling (JHU/UNC Flu Hub, Current)
-Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25 and 2025/26 seasons. Nationwide simulations using FlepiMoP with hierarchical Bayesian calibration across U.S. states, informing real-time public health decision-making. Leading scientific overhaul in advance of the 2026/27 season. These scenarios are used in part to help set influenza vaccination policy.
+Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25, 2025/26, and 2026/27 seasons. Set up the ACCIDDA flu model and operational pipeline (2024/25). Extensive work with external modeling packages drove contributions that led to FlepiMoP2 (2025/26). Supervising an undergraduate student in a scientific overhaul of the flu model (2026/27). These scenarios inform real-time public health decision-making and are used in part to help set influenza vaccination policy.
 
 ## Hib Vaccination Modeling (Navajo Nation, Current)
 Technical lead supervising implementation of an age- and immune-status-structured Hib model for the Navajo Nation to evaluate the impact of long-running vaccination programs.
