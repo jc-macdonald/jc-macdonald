@@ -21,9 +21,6 @@ Operator-partitioned numerical solver for generative scientific models. Supports
 ## [op_system](https://github.com/ACCIDDA/op_system)
 Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
 
-## [flepimop2](https://github.com/ACCIDDA/flepimop2)
-Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
-
 ## [model-criticism](https://github.com/jcm-sci/model-criticism)
 Observable-based model evaluation framework with proper scoring rules, Pareto optimization, and Bayesian stacking for simulation studies. Determines whether a model deserves the decisions built on it.
 
@@ -31,6 +28,9 @@ Observable-based model evaluation framework with proper scoring rules, Pareto op
 Posterior predictive eigenvalue testing for signal rank determination in covariance and Gram matrices. Supports ordered hypothesis testing with FWER and FDR control.
 
 # Software — Contributor
+
+## [flepimop2](https://github.com/ACCIDDA/flepimop2)
+Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
 
 ## [FlepiMoP](https://github.com/HopkinsIDD/flepiMoP)
 Flexible Pipeline for Modeling Pathogens. Contributed [5×–20× runtime speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592) to the simulation backend through profiling-driven optimization.
