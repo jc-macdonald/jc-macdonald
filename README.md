@@ -1,10 +1,10 @@
-# **Principled inference and decision support for scientific systems under partial observability.**
+# **Decision support and principled inference for scientific systems under partial observability.**
 
 Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
 
-I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences. My work integrates **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation** — because prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
+I determine what actions to take, what experiments to run, and what measurements are worth collecting in systems where interventions are costly and uncertainty is unavoidable. To do this, I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences — integrating **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation**. Prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
 
-Applications include infectious disease forecasting and decision support, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics.
+Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics.
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
@@ -16,15 +16,15 @@ Applications include infectious disease forecasting and decision support, survei
 Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
 
 ## [op_engine](https://github.com/ACCIDDA/op_engine)
-Operator-partitioned numerical solver for generative scientific models. Supports ODE and IMEX/PDE operator splitting with pluggable linear solver backends. Born from benchmarking the original [FlepiMoP](https://www.flepimop.org) solver, which identified architectural bottlenecks that motivated a ground-up redesign.
+Lightweight multiphysics solver core for time-dependent systems. Supports explicit ODE solvers and IMEX/operator-splitting schemes for PDE-like models with pluggable linear solver backends. Framework-agnostic; separates state management from stepping logic.
 
 ## [op_system](https://github.com/ACCIDDA/op_system)
 Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
 
 ## Model Criticism — observable-based model evaluation
-Determines whether a model deserves the decisions built on it. Structured observables, proper scoring rules, Pareto-optimal configuration selection, and Bayesian stacking for simulation studies.
+Structured framework for evaluating scientific simulation models: model worlds with known ground truth, observable-based scoring with proper scoring rules, multi-objective Pareto optimization, and Bayesian model stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
 
-- **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna. Consumers: VBPCApy, pp-eigentest.
+- **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
 - **[ModelCriticism.jl](https://github.com/jcm-sci/ModelCriticism.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
 
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
