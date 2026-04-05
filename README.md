@@ -21,10 +21,13 @@ Operator-partitioned numerical solver for generative scientific models. Supports
 ## [op_system](https://github.com/ACCIDDA/op_system)
 Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
 
-## [model-criticism](https://github.com/jcm-sci/model-criticism)
-Observable-based model evaluation framework with proper scoring rules, Pareto optimization, and Bayesian stacking for simulation studies. Determines whether a model deserves the decisions built on it.
+## Model Criticism — observable-based model evaluation
+Determines whether a model deserves the decisions built on it. Structured observables, proper scoring rules, Pareto-optimal configuration selection, and Bayesian stacking for simulation studies.
 
-## [pp-eigentest](https://github.com/jcm-sci/pp-eigentest)
+- **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna. Consumers: VBPCApy, pp-eigentest.
+- **[ModelCriticism.jl](https://github.com/jcm-sci/ModelCriticism.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
+
+## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
 Posterior predictive eigenvalue testing for signal rank determination in covariance and Gram matrices. Supports ordered hypothesis testing with FWER and FDR control.
 
 # Software — Contributor
