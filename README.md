@@ -6,6 +6,8 @@ I determine what actions to take, what experiments to run, and what measurements
 
 Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. This work has directly informed CDC influenza vaccination policy, wildlife disease surveillance in sub-Saharan Africa, and public health resource allocation during respiratory virus seasons.
 
+**Domains → Tools:**  Infectious disease ([op_engine](https://github.com/ACCIDDA/op_engine), [flepimop2](https://github.com/ACCIDDA/flepimop2), [Flu Hub](https://github.com/midas-network/flu-scenario-modeling-hub)) · Wildlife & zoonotic disease ([op_engine](https://github.com/ACCIDDA/op_engine), [model-criticism](https://github.com/jcm-sci/model-criticism)) · Cultural evolution & genomics ([VBPCApy](https://github.com/yoavram-lab/VBPCApy), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)) · Marine ecology ([op_system](https://github.com/ACCIDDA/op_system), [model-criticism](https://github.com/jcm-sci/model-criticism)) · Cross-domain methods ([model-criticism](https://github.com/jcm-sci/model-criticism), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest))
+
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
 ---
