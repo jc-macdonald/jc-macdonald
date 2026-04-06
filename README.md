@@ -14,27 +14,37 @@ Applications include infectious disease forecasting and intervention timing, sur
 
 # Software — Primary Architect
 
-## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
+## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![CI](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml/badge.svg)](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
+**Status: Released on PyPI · JOSS submission in preparation**
+
 Recovers hidden population structure from datasets with substantial missing entries — applied to cultural, genetic, and survey data where complete records are rare. Variational Bayesian PCA with native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, and C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
 
-## [op_engine](https://github.com/ACCIDDA/op_engine)
+## [op_engine](https://github.com/ACCIDDA/op_engine) · [![CI](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_engine/)
+**Status: Active development · In production for CDC flu forecasting**
+
 Simulation engine powering CDC-funded influenza forecasting and wildlife disease modeling. Lightweight multiphysics solver core for time-dependent systems with explicit ODE solvers, IMEX/operator-splitting schemes, and pluggable linear solver backends. Framework-agnostic; separates state management from stepping logic.
 
-## [op_system](https://github.com/ACCIDDA/op_system)
+## [op_system](https://github.com/ACCIDDA/op_system) · [![CI](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_system/)
+**Status: Active development**
+
 Lets modelers define disease or ecological models in plain configuration files rather than writing solver code. Declarative equation compiler for structured dynamical systems (age-structured epidemic models, size-structured ecological models) that transforms YAML definitions into callable numerics consumed by op_engine or other solvers.
 
-## Model Criticism — observable-based model evaluation
+## Model Criticism — observable-based model evaluation · [![CI](https://github.com/jcm-sci/model-criticism/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/model-criticism/actions/workflows/ci.yml)
+**Status: Active development**
+
 Answers the question: *should you trust this model's predictions before acting on them?* Structured evaluation framework using model worlds with known ground truth, observable-based scoring, multi-objective Pareto optimization, and Bayesian model stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
 
 - **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
 - **[ModelCriticism.jl](https://github.com/jcm-sci/ModelCriticism.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
 
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
+**Status: Pre-release · Companion to [arXiv:2409.12129](https://arxiv.org/abs/2409.12129) · Public release planned with paper**
+
 Determines how many meaningful patterns exist in a dataset, separating signal from noise. Posterior predictive eigenvalue testing for covariance and Gram matrices with ordered hypothesis testing, FWER and FDR control.
 
 # Software — Contributor
 
-## [flepimop2](https://github.com/ACCIDDA/flepimop2)
+## [flepimop2](https://github.com/ACCIDDA/flepimop2) · [![CI](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml)
 Manages the large-scale simulation campaigns that produce CDC scenario projections and forecasts. Config-driven batch orchestrator with pluggable system + engine backends, parameter management, and output collection.
 
 ## [FlepiMoP](https://github.com/HopkinsIDD/flepiMoP)
