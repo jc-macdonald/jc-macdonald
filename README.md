@@ -4,7 +4,7 @@ Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins
 
 I determine what actions to take, what experiments to run, and what measurements are worth collecting in systems where interventions are costly and uncertainty is unavoidable. To do this, I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences — integrating **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation**. Prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
 
-Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics.
+Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. This work has directly informed CDC influenza vaccination policy, wildlife disease surveillance in sub-Saharan Africa, and public health resource allocation during respiratory virus seasons.
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
@@ -13,27 +13,27 @@ Applications include infectious disease forecasting and intervention timing, sur
 # Software — Primary Architect
 
 ## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
-Variational Bayesian PCA for incomplete data. Native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
+Recovers hidden population structure from datasets with substantial missing entries — applied to cultural, genetic, and survey data where complete records are rare. Variational Bayesian PCA with native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, and C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
 
 ## [op_engine](https://github.com/ACCIDDA/op_engine)
-Lightweight multiphysics solver core for time-dependent systems. Supports explicit ODE solvers and IMEX/operator-splitting schemes for PDE-like models with pluggable linear solver backends. Framework-agnostic; separates state management from stepping logic.
+Simulation engine powering CDC-funded influenza forecasting and wildlife disease modeling. Lightweight multiphysics solver core for time-dependent systems with explicit ODE solvers, IMEX/operator-splitting schemes, and pluggable linear solver backends. Framework-agnostic; separates state management from stepping logic.
 
 ## [op_system](https://github.com/ACCIDDA/op_system)
-Declarative governing equation specification compiler for structured dynamical systems (e.g., age-structured epidemic models, size-structured plankton models). Transforms YAML model definitions into callable numerics consumed by op_engine or other solvers.
+Lets modelers define disease or ecological models in plain configuration files rather than writing solver code. Declarative equation compiler for structured dynamical systems (age-structured epidemic models, size-structured ecological models) that transforms YAML definitions into callable numerics consumed by op_engine or other solvers.
 
 ## Model Criticism — observable-based model evaluation
-Structured framework for evaluating scientific simulation models: model worlds with known ground truth, observable-based scoring with proper scoring rules, multi-objective Pareto optimization, and Bayesian model stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
+Answers the question: *should you trust this model's predictions before acting on them?* Structured evaluation framework using model worlds with known ground truth, observable-based scoring, multi-objective Pareto optimization, and Bayesian model stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
 
 - **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
 - **[ModelCriticism.jl](https://github.com/jcm-sci/ModelCriticism.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
 
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
-Posterior predictive eigenvalue testing for signal rank determination in covariance and Gram matrices. Supports ordered hypothesis testing with FWER and FDR control.
+Determines how many meaningful patterns exist in a dataset, separating signal from noise. Posterior predictive eigenvalue testing for covariance and Gram matrices with ordered hypothesis testing, FWER and FDR control.
 
 # Software — Contributor
 
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2)
-Simulation campaign orchestrator for config-driven batch runs. Pluggable system + engine backends, parameter management, output collection. Domain-agnostic core supporting infectious disease forecasting and scenario modeling workflows.
+Manages the large-scale simulation campaigns that produce CDC scenario projections and forecasts. Config-driven batch orchestrator with pluggable system + engine backends, parameter management, and output collection.
 
 ## [FlepiMoP](https://github.com/HopkinsIDD/flepiMoP)
 Flexible Pipeline for Modeling Pathogens. Contributed [5×–20× runtime speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592) to the simulation backend through profiling-driven optimization.
@@ -64,6 +64,8 @@ Developing formal convergence guarantees for variational Bayesian PCA: closed-fo
 ---
 
 # Expertise
+
+These capabilities are deployed to design interventions, optimize surveillance strategies, and determine what experiments and measurements are worth their cost.
 
 **Modeling** · Generative models (ODE/PDE/stochastic/hybrid), scientific AI/ML (physics-embedded surrogates), stability and bifurcation analysis, simulation-based inference, global sensitivity analysis (Sobol, PRCC, Morris)
 
