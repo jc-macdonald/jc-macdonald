@@ -100,5 +100,15 @@ These capabilities are deployed to design interventions, optimize surveillance s
 </table>
 
 <p align="center">
-  <img src="https://github-contribution-stats.vercel.app/api/?username=jc-macdonald" alt="Contribution Stats" />
+  <a href="https://github.com/jc-macdonald">
+    <img height="180" src="https://github-readme-stats.vercel.app/api?username=jc-macdonald&show_icons=true&theme=github_dark_dimmed&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  </a>
+  <a href="https://github.com/jc-macdonald">
+    <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jc-macdonald&layout=compact&theme=github_dark_dimmed&hide_border=true&langs_count=6" alt="Top Languages" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/jc-macdonald">
+    <img src="https://streak-stats.demolab.com/?user=jc-macdonald&theme=github_dark_dimmed&hide_border=true" alt="GitHub Streak" />
+  </a>
 </p>
