@@ -6,7 +6,7 @@ I determine what actions to take, what experiments to run, and what measurements
 
 Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. The infectious disease tools are developed for CDC-funded scenario modeling contributions that feed into the process used to set influenza vaccination policy; other applications include wildlife disease surveillance design in sub-Saharan Africa and cross-scale ecological modeling.
 
-**Domains → Tools:** Infectious disease ([op_engine](https://github.com/ACCIDDA/op_engine), [flepimop2](https://github.com/ACCIDDA/flepimop2), [Flu Hub](https://github.com/midas-network/flu-scenario-modeling-hub)) · Wildlife & zoonotic disease ([op_engine](https://github.com/ACCIDDA/op_engine), [model-criticism](https://github.com/jcm-sci/model-criticism)) · Cultural evolution & genomics ([VBPCApy](https://github.com/yoavram-lab/VBPCApy), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)) · Marine ecology ([op_system](https://github.com/ACCIDDA/op_system), [model-criticism](https://github.com/jcm-sci/model-criticism)) · Cross-domain methods ([model-criticism](https://github.com/jcm-sci/model-criticism), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest))
+**Domains → Tools:** Infectious disease ([op_engine](https://github.com/ACCIDDA/op_engine), [flepimop2](https://github.com/ACCIDDA/flepimop2), [Flu Hub](https://github.com/midas-network/flu-scenario-modeling-hub)) · Wildlife & zoonotic disease ([op_engine](https://github.com/ACCIDDA/op_engine), [trade-study](https://github.com/jcm-sci/trade-study)) · Cultural evolution & genomics ([VBPCApy](https://github.com/yoavram-lab/VBPCApy), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)) · Marine ecology ([op_system](https://github.com/ACCIDDA/op_system), [trade-study](https://github.com/jcm-sci/trade-study)) · Cross-domain methods ([trade-study](https://github.com/jcm-sci/trade-study), [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest))
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
@@ -29,13 +29,13 @@ Simulation engine for CDC-funded influenza scenario modeling and wildlife diseas
 
 Lets modelers define disease or ecological models in plain configuration files rather than writing solver code. Declarative equation compiler for structured dynamical systems (age-structured epidemic models, size-structured ecological models) that transforms YAML definitions into callable numerics consumed by op_engine or other solvers.
 
-## Model Criticism — observable-based model evaluation · [![CI](https://github.com/jcm-sci/model-criticism/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/model-criticism/actions/workflows/ci.yml)
+## Trade Study — multi-objective model evaluation and design-space exploration · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml)
 **Status: Active development**
 
-Answers the question: *should you trust this model's predictions before acting on them?* Structured evaluation framework using model worlds with known ground truth, observable-based scoring, multi-objective Pareto optimization, and Bayesian model stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
+Answers the question: *should you trust this model's predictions before acting on them?* Systems engineering trade-study framework that uses model worlds with known ground truth to score, rank, and select among competing model configurations — tuning inference pipelines, observable weights, and design parameters via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
 
-- **[model-criticism](https://github.com/jcm-sci/model-criticism)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
-- **[ModelCriticism.jl](https://github.com/jcm-sci/ModelCriticism.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
+- **[trade-study](https://github.com/jcm-sci/trade-study)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
+- **[TradeStudy.jl](https://github.com/jcm-sci/TradeStudy.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
 
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
 **Status: Pre-release · Companion to [arXiv:2409.12129](https://arxiv.org/abs/2409.12129) · Public release planned with paper**
