@@ -29,10 +29,10 @@ Simulation engine for CDC-funded influenza scenario modeling and wildlife diseas
 
 Declarative specification language and compiler for structured dynamical systems. Researchers define models via two pathways — explicit governing equations or transition diagrams — with multi-axis stratification, automatic template expansion, and chain synthesis for staged compartments. Specifications are AST-validated and compiled to safe bytecode closures; structured metadata passes through to downstream solvers like op_engine.
 
-## Trade Study — multi-objective model evaluation and design-space exploration · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml)
+## Trade Study — multi-objective design, evaluation, and decision support · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml)
 **Status: Active development**
 
-Answers the question: *should you trust this model's predictions before acting on them?* Users define **simulators** — protocol-conformant objects that generate `(truth, observations)` pairs — then score, rank, and select among competing model configurations via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Evaluation proceeds through hierarchical phases (discovery → refinement → benchmark).
+Answers the question: *which configuration should you trust before acting?* Users define **simulators** — protocol-conformant objects that generate `(truth, observations)` pairs — then score competing configurations (model formulations, solver choices, measurement strategies, or any design decision) against known ground truth via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Evaluation proceeds through hierarchical phases (discovery → refinement → benchmark).
 
 - **[trade-study](https://github.com/jcm-sci/trade-study)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
 - **[TradeStudy.jl](https://github.com/jcm-sci/TradeStudy.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
