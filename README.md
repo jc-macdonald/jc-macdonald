@@ -2,7 +2,7 @@
 
 Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
 
-I determine what actions to take, what experiments to run, and what measurements are worth collecting in systems where interventions are costly and uncertainty is unavoidable. To do this, I build methods, scientific AI/ML, and research software for partially observed systems across earth, environmental, and health sciences — integrating **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation**. Prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
+I determine what actions to take, what experiments to run, and what measurements are worth collecting in systems where interventions are costly and uncertainty is unavoidable. To do this, I build open scientific computing infrastructure — **declarative modeling**, **simulation**, and **generative decision support** — for partially observed systems across health, environmental, and earth sciences, integrating **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation**. Prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
 
 Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. The infectious disease tools are developed for CDC-funded scenario modeling contributions that feed into the process used to set influenza vaccination policy; other applications include wildlife disease surveillance design in sub-Saharan Africa and cross-scale ecological modeling.
 
@@ -17,22 +17,22 @@ Applications include infectious disease forecasting and intervention timing, sur
 ## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![CI](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml/badge.svg)](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
 **Status: Released on PyPI · JOSS submission in preparation**
 
-Recovers hidden population structure from datasets with substantial missing entries — applied to cultural, genetic, and survey data where complete records are rare. Used in [Macdonald et al. (2024, *Evolutionary Human Sciences*)](https://doi.org/10.1017/ehs.2024.45). Variational Bayesian PCA with native missingness handling (MCAR/MNAR/block), uncertainty-calibrated posterior outputs, automatic relevance determination for rank selection, and C++ accelerated kernels. Currently preparing convergence characterization and JOSS submission.
+Recovers hidden population structure from datasets with substantial missing entries — applied to cultural, genetic, and survey data where complete records are rare. Used in [Macdonald et al. (2024, *Evolutionary Human Sciences*)](https://doi.org/10.1017/ehs.2024.45). Variational Bayesian PCA for incomplete data with native per-entry missingness handling, full posterior uncertainty quantification, automatic component pruning, built-in model selection, C++-accelerated kernels, and scikit-learn-compatible API. Currently preparing convergence characterization and JOSS submission.
 
 ## [op_engine](https://github.com/ACCIDDA/op_engine) · [![CI](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_engine/)
 **Status: Active development · Developed for CDC-funded flu scenario modeling**
 
-Simulation engine for CDC-funded influenza scenario modeling and wildlife disease modeling. Lightweight multiphysics solver core for time-dependent systems with explicit ODE solvers, IMEX/operator-splitting schemes, and pluggable linear solver backends. Framework-agnostic; separates state management from stepping logic.
+Simulation engine for CDC-funded influenza scenario modeling and wildlife disease modeling. Operator-partitioned ODE/PDE solver core that splits the right-hand side into explicit and implicit parts, advancing them jointly via nine methods (explicit, IMEX, fully implicit) with adaptive step-size control, zero per-step allocation, and cached implicit solves with dense/sparse autodispatch.
 
 ## [op_system](https://github.com/ACCIDDA/op_system) · [![CI](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_system/)
 **Status: Active development**
 
-Lets modelers define disease or ecological models in plain configuration files rather than writing solver code. Declarative equation compiler for structured dynamical systems (age-structured epidemic models, size-structured ecological models) that transforms YAML definitions into callable numerics consumed by op_engine or other solvers.
+Declarative specification language and compiler for structured dynamical systems. Researchers define models via two pathways — explicit governing equations or transition diagrams — with multi-axis stratification, automatic template expansion, and chain synthesis for staged compartments. Specifications are AST-validated and compiled to safe bytecode closures; structured metadata passes through to downstream solvers like op_engine.
 
 ## Trade Study — multi-objective model evaluation and design-space exploration · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml)
 **Status: Active development**
 
-Answers the question: *should you trust this model's predictions before acting on them?* Systems engineering trade-study framework that uses model worlds with known ground truth to score, rank, and select among competing model configurations — tuning inference pipelines, observable weights, and design parameters via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Organizes evaluation into hierarchical phases (discovery → refinement → benchmark).
+Answers the question: *should you trust this model's predictions before acting on them?* Users define **simulators** — protocol-conformant objects that generate `(truth, observations)` pairs — then score, rank, and select among competing model configurations via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Evaluation proceeds through hierarchical phases (discovery → refinement → benchmark).
 
 - **[trade-study](https://github.com/jcm-sci/trade-study)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
 - **[TradeStudy.jl](https://github.com/jcm-sci/TradeStudy.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
@@ -40,12 +40,12 @@ Answers the question: *should you trust this model's predictions before acting o
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
 **Status: Pre-release · Companion to [arXiv:2409.12129](https://arxiv.org/abs/2409.12129) · Public release planned with paper**
 
-Determines how many meaningful patterns exist in a dataset, separating signal from noise. Posterior predictive eigenvalue testing for covariance and Gram matrices with ordered hypothesis testing, FWER and FDR control. Applied in [Macdonald et al. (2024, *Evolutionary Human Sciences*)](https://doi.org/10.1017/ehs.2024.45).
+Determines how many meaningful patterns exist in a dataset, separating signal from noise. Posterior predictive eigenvalue testing with INID bootstrap over Gram spectra, three-layer consensus architecture (dimensionality heuristics, adaptive thresholding, multiple testing correction with FWER and FDR control). NumPy and JAX backends. Applied in [Macdonald et al. (2024, *Evolutionary Human Sciences*)](https://doi.org/10.1017/ehs.2024.45).
 
 # Software — Contributor
 
 ## [flepimop2](https://github.com/ACCIDDA/flepimop2) · [![CI](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml)
-Batch orchestrator for large-scale simulation campaigns supporting CDC scenario projections and forecasts. Config-driven batch orchestrator with pluggable system + engine backends, parameter management, and output collection.
+Configuration-driven orchestration engine for CDC-supported infectious disease forecasting and scenario analysis. Plugin architecture decouples model specification, numerical integration, and output persistence.
 
 ## [FlepiMoP](https://github.com/HopkinsIDD/flepiMoP)
 Flexible Pipeline for Modeling Pathogens. Contributed [5×–20× runtime speedups](https://github.com/HopkinsIDD/flepiMoP/pull/592) to the simulation backend through profiling-driven optimization.
@@ -67,8 +67,8 @@ Technical lead supervising implementation of an age- and immune-status-structure
 
 # Research
 
-## Operator-Partitioned Solver Ecosystem (Current)
-Benchmarking the [FlepiMoP](https://www.flepimop.org) backend revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_engine](https://github.com/ACCIDDA/op_engine) + [op_system](https://github.com/ACCIDDA/op_system) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a modular, operator-partitioned simulation platform being developed for CDC-funded influenza scenario modeling.
+## Operator-Partitioned Simulation Stack (Current)
+Benchmarking the [FlepiMoP](https://www.flepimop.org) backend revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_system](https://github.com/ACCIDDA/op_system) + [op_engine](https://github.com/ACCIDDA/op_engine) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a declarative modeling and simulation platform where model specifications compile to validated bytecode consumed by an operator-partitioned solver, orchestrated by a configuration-driven campaign engine. Being deployed for CDC-funded scenario modeling.
 
 ## VBPCApy Convergence Characterization (Current)
 Developing formal convergence guarantees for variational Bayesian PCA ([VBPCApy](https://github.com/yoavram-lab/VBPCApy)): closed-form ELBO monotonicity proofs, CAVI contraction rate bounds, and a systematic grid experiment (15 factors, ~80k configurations) characterizing posterior quality vs. wall time across missingness patterns, priors, and stopping criteria.
