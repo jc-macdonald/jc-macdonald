@@ -29,13 +29,13 @@ Simulation engine for CDC-funded influenza scenario modeling and wildlife diseas
 
 Declarative specification language and compiler for structured dynamical systems. Researchers define models via two pathways — explicit governing equations or transition diagrams — with multi-axis stratification, automatic template expansion, and chain synthesis for staged compartments. Specifications are AST-validated and compiled to safe bytecode closures; structured metadata passes through to downstream solvers like op_engine.
 
-## Trade Study — multi-objective design, evaluation, and decision support · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml)
-**Status: Active development**
+## [trade-study](https://github.com/jcm-sci/trade-study) — multi-objective trade-study orchestration · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://jcm-sci.github.io/trade-study/)
+**Status: Released on PyPI**
 
-Answers the question: *which configuration should you trust before acting?* Users define **simulators** — protocol-conformant objects that generate `(truth, observations)` pairs — then score competing configurations (model formulations, solver choices, measurement strategies, or any design decision) against known ground truth via proper scoring rules, multi-objective Pareto optimization, and Bayesian stacking. Evaluation proceeds through hierarchical phases (discovery → refinement → benchmark).
+Define factors, build parameter grids, run hierarchical study phases, and extract Pareto fronts — for any domain where you compare alternatives against competing objectives. Protocol-driven architecture with proper scoring rules, experimental design (full factorial, LHS, Sobol, Halton, Morris screening), Pareto optimization, adaptive NSGA-II search, and Bayesian model stacking.
 
 - **[trade-study](https://github.com/jcm-sci/trade-study)** (Python) — wraps scoringrules, pymoo, arviz, SALib, optuna.
-- **[TradeStudy.jl](https://github.com/jcm-sci/TradeStudy.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl. Native scoring rules.
+- **[TradeStudy.jl](https://github.com/jcm-sci/TradeStudy.jl)** (Julia) — wraps Metaheuristics.jl, ParetoSmooth.jl, QuasiMonteCarlo.jl, GlobalSensitivity.jl.
 
 ## [pp-eigentest](https://github.com/yoavram-lab/pp-eigentest)
 **Status: Pre-release · Companion to [arXiv:2409.12129](https://arxiv.org/abs/2409.12129) · Public release planned with paper**
