@@ -1,6 +1,6 @@
 # **Decision support and principled inference for scientific systems under partial observability.**
 
-Hi, I'm Josh — postdoc at the Bloomberg School of Public Health, Johns Hopkins.
+Hi, I'm Josh — Assistant Scientist in the Department of International Health within the Bloomberg School of Public Health at Johns Hopkins University.
 
 I determine what actions to take, what experiments to run, and what measurements are worth collecting in systems where interventions are costly and uncertainty is unavoidable. To do this, I build open scientific computing infrastructure — **declarative modeling**, **simulation**, and **generative decision support** — for partially observed systems across health, environmental, and earth sciences, integrating **generative modeling** (mechanistic, statistical, and hybrid), **Bayesian inference**, **numerical solver design**, and **model evaluation**. Prediction alone is not enough; the structural assumptions in every model must be tested and defended before anyone acts on the output.
 
