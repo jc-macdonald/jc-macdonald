@@ -20,25 +20,25 @@ Applications include infectious disease forecasting and intervention timing, sur
 
 Recovers hidden population structure from datasets with substantial missing entries — applied to cultural, genetic, and survey data where complete records are rare. Used in [Macdonald et al. (2024, _Evolutionary Human Sciences_)](https://doi.org/10.1017/ehs.2024.45). Variational Bayesian PCA for incomplete data with native per-entry missingness handling, full posterior uncertainty quantification, automatic component pruning, built-in model selection, C++-accelerated kernels, and a scikit-learn-compatible API. Current work focuses on package hardening and a JOSS submission.
 
-## [op_engine](https://github.com/ACCIDDA/op_engine) · [![CI](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_engine/)
+## [op_engine](https://github.com/ACCIDDA/op_engine) · [![CI](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yaml/badge.svg)](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yaml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_engine/)
 
-**Status: Active development · Developed for CDC-funded flu scenario modeling**
+**Status: Released on [PyPI](https://pypi.org/project/op-engine/) · Active development · CDC-funded scenario modeling**
 
-Simulation engine for CDC-funded influenza scenario modeling and wildlife disease modeling. Portable Array-API numerical kernels support explicit, IMEX, fully implicit, and stochastic integration, while provider integrations add backend-native control flow, compilation, checkpointing, and schedule validation. NumPy has mutable/preallocated fast paths; JAX adds device-resident adaptive discovery and differentiable frozen-schedule replay; PyTorch supports eager fixed-step autograd; and CuPy is supported through dense Array-API paths and a tested sparse adapter.
+Framework-independent numerical core for compartmental and spatial models, used in CDC-funded influenza scenario modeling and wildlife disease research. It provides explicit, IMEX, implicit and stochastic methods, named observations, adaptive-schedule replay, and independent NumPy CPU SSA banks with optional reaction firing counts. The [backend qualification matrix](https://accidda.github.io/op_engine/latest/guides/backend-qualification/) identifies tested NumPy, JAX and CPU PyTorch methods and derivatives; GPU execution needs separate hardware qualification. Use the core directly or through the separately packaged FlepiMoP2 provider.
 
-## [op_system](https://github.com/ACCIDDA/op_system) · [![CI](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_system/)
+## [op_system](https://github.com/ACCIDDA/op_system) · [![CI](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yaml/badge.svg)](https://github.com/ACCIDDA/op_system/actions/workflows/ci.yaml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_system/)
 
-**Status: Active development**
+**Status: Released on [PyPI](https://pypi.org/project/op-system/) · Active development**
 
-Declarative specification language and compiler for structured dynamical systems. A restricted expression parser lowers explicit equations or transition diagrams through a typed intermediate representation to vectorized Python AST and code objects. The same compiled right-hand side works with NumPy, JAX transformations, and PyTorch autograd, with support for flat, block, and PyTree state layouts plus validated operators, reactions, routing, and constraints.
+Declarative specification language and compiler for structured dynamical systems. Restricted equations or transition models compile to vectorized right-hand sides for NumPy, JAX and PyTorch, with flat, structured and independent-block state layouts. The compiler publishes reaction metadata, named observables, forcing schedules and checked replicate-independence declarations for numerical consumers. Structural validation is complemented by independent-equation and conservation checks; [constraint metadata is not yet enforced](https://accidda.github.io/op_system/latest/guides/getting-started/#cross-axis-constraints-current-boundary).
 
 ## [trade-study](https://github.com/jcm-sci/trade-study) — multi-objective trade-study orchestration · [![CI](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml/badge.svg)](https://github.com/jcm-sci/trade-study/actions/workflows/ci.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19599838.svg)](https://doi.org/10.5281/zenodo.19599838) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://jcm-sci.github.io/trade-study/)
 
 **Status: Released on PyPI**
 
-Define factors, build parameter grids, run hierarchical study phases, and extract Pareto fronts — for any domain where you compare alternatives against competing objectives. Protocol-driven architecture with proper scoring rules, experimental design (full factorial, LHS, Sobol, Halton, Morris screening), Pareto optimization, adaptive NSGA-II search, and Bayesian model stacking.
+Design and evaluation framework for comparing simulation configurations against competing objectives. Build grids, run replicated studies and hierarchical phases, compare designs with shared random numbers, and report Pareto fronts, preferences, regret and practical equivalence. Optional integrations provide proper scoring rules, sensitivity analysis, adaptive search, surrogate models and model weighting. Fixed or adaptive replication and provenance-checked result bundles make the study contract explicit; calibration, power and transfer to observational data still need application-specific evidence.
 
-- **[trade-study](https://github.com/jcm-sci/trade-study)** (Python) — wraps scoringrules, pymoo, arviz, SALib, and optuna.
+[Documentation and executable examples](https://jcm-sci.github.io/trade-study/guide/capabilities/).
 
 ## [pp-eigentest](https://jcmacdonald.dev/projects/pp_eigentest/)
 
@@ -48,7 +48,7 @@ Determines how many meaningful patterns exist in a dataset, separating signal fr
 
 # Software — Contributor
 
-## [flepimop2](https://github.com/ACCIDDA/flepimop2) · [![CI](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml/badge.svg)](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yml)
+## [flepimop2](https://github.com/ACCIDDA/flepimop2) · [![CI](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yaml/badge.svg)](https://github.com/ACCIDDA/flepimop2/actions/workflows/ci.yaml)
 
 Configuration-driven orchestration engine for CDC-supported infectious disease forecasting and scenario analysis. Plugin architecture decouples model specification, numerical integration, and output persistence.
 
@@ -78,7 +78,7 @@ Technical lead supervising implementation of an age- and immune-status-structure
 
 ## Operator-Partitioned Simulation Stack (Current)
 
-Benchmarking the [FlepiMoP](https://www.flepimop.org) backend revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_system](https://github.com/ACCIDDA/op_system) + [op_engine](https://github.com/ACCIDDA/op_engine) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a restricted specification compiler, an Array-API-polymorphic operator-partitioned solver with backend-native execution providers, and a configuration-driven campaign orchestrator. In adaptive differentiable workflows, op_engine separates discrete mesh discovery from differentiable frozen-schedule replay; gradients are therefore conditional on the recorded mesh, which is refreshed when accuracy diagnostics fail or parameters move materially.
+Benchmarking the [FlepiMoP](https://www.flepimop.org) backend revealed architectural limitations that motivated a clean-sheet redesign. The result is the [op_system](https://github.com/ACCIDDA/op_system) + [op_engine](https://github.com/ACCIDDA/op_engine) + [flepimop2](https://github.com/ACCIDDA/flepimop2) stack: a restricted specification compiler, an Array-API-polymorphic operator-partitioned solver with backend-native execution providers, and a configuration-driven campaign orchestrator. The public cores also expose forcing schedules, named observables and independent-replicate reaction contracts. [trade-study](https://github.com/jcm-sci/trade-study) adds replicated design and evaluation workflows. Adaptive replay gradients are conditional on the recorded mesh; accuracy checks determine when a fresh solve is needed.
 
 ## Current Analysis Portfolio
 
