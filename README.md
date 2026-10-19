@@ -2,7 +2,7 @@
 
 I'm Josh, an Assistant Scientist in the Department of International Health at the Johns Hopkins Bloomberg School of Public Health.
 
-I study how models can inform interventions, surveillance, and data collection when the underlying system is only partly observed. I develop simulation, Bayesian inference, numerical methods, and model-evaluation software for health, environmental, and earth sciences. A recurring question is how assumptions about the system and its measurements affect the conclusions we draw.
+I develop mathematical models, statistical methods, and software for health, environmental, and earth sciences. I study how systems change over time, how well models describe their behavior, and how models can inform interventions and data collection. A recurring question is how measurements and scientific assumptions affect the conclusions we draw.
 
 Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. The infectious disease tools contribute to CDC-funded multi-model scenario evidence used for public-health planning; other applications include wildlife disease surveillance design in sub-Saharan Africa and cross-scale ecological modeling.
 
