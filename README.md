@@ -10,6 +10,14 @@ Applications include infectious disease forecasting and intervention timing, sur
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
+## Research in progress
+
+- **[Structural scores](https://jcmacdonald.dev/projects/current_analyses/#structural-scores-and-scientific-prediction):** assessing scientific predictions against declared constraints, including checks before outcomes are observed, alongside predictive evaluation.
+- **[Inference and calibration](https://jcmacdonald.dev/projects/inference_calibration/):** working research software connects Bayesian fitting, simulation-based calibration and replicated study-design checks. The software remains private and pre-release; application-specific validation is ongoing.
+- **[Scientific applications](https://jcmacdonald.dev/projects/current_analyses/#application-studies):** ongoing work on dengue within-host dynamics, COVID-19 observation noise, diphtheria vaccination and CCHF surveillance.
+
+These summaries describe research questions and aims. Public papers and artifacts are linked as they become available.
+
 ---
 
 # Software — Primary Architect
@@ -42,9 +50,9 @@ Design and evaluation framework for comparing simulation configurations against 
 
 ## [pp-eigentest](https://jcmacdonald.dev/projects/pp_eigentest/)
 
-**Status: Private pre-release · Companion to [arXiv:2409.12129](https://arxiv.org/abs/2409.12129) · Public release planned with paper**
+**Status: Ongoing methods research · Private pre-release software · Methods paper in preparation**
 
-Determines how many meaningful patterns exist in a dataset, separating signal from noise. The current analysis plan centers a sequential fitted-model rank selector and treats the earlier ensemble/consensus approach as a supplementary negative result. NumPy is the reference path, JAX is opt-in, C++ is selected only when measured faster, and sparse inputs are guarded before dense spectral computation. Applied in [Macdonald et al. (2024, _Evolutionary Human Sciences_)](https://doi.org/10.1017/ehs.2024.45).
+Investigates how many latent dimensions an incomplete dataset can support, using posterior predictive eigenvalue testing and Bayesian latent-variable models. Current work studies rank decisions, uncertainty and calibration, building on the earlier methodology described in the [2024 preprint](https://arxiv.org/abs/2409.12129). The ongoing study is distinct from the released VBPCApy package.
 
 # Software — Contributor
 
