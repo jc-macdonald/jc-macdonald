@@ -13,7 +13,7 @@ Applications include infectious disease forecasting and intervention timing, sur
 ## Research in progress
 
 - **[Structural scores](https://jcmacdonald.dev/projects/current_analyses/#structural-scores-and-scientific-prediction):** assessing scientific predictions against declared constraints, including checks before outcomes are observed, alongside predictive evaluation.
-- **[Inference and calibration](https://jcmacdonald.dev/projects/inference_calibration/):** working research software connects Bayesian fitting, simulation-based calibration and replicated study-design checks. The software remains private and pre-release; application-specific validation is ongoing.
+- **[Inference and calibration with op_infer](https://jcmacdonald.dev/projects/inference_calibration/):** working research software connects Bayesian fitting, simulation-based calibration and replicated study-design checks. The software remains private, pre-alpha and unreleased; application-specific validation is ongoing.
 - **[Scientific applications](https://jcmacdonald.dev/projects/current_analyses/#application-studies):** ongoing work on dengue within-host dynamics, COVID-19 observation noise, diphtheria vaccination and CCHF surveillance.
 
 These summaries describe research questions and aims. Public papers and artifacts are linked as they become available.
@@ -47,6 +47,12 @@ Declarative specification language and compiler for structured dynamical systems
 Design and evaluation framework for comparing simulation configurations against competing objectives. Build grids, run replicated studies and hierarchical phases, compare designs with shared random numbers, and report Pareto fronts, preferences, regret and practical equivalence. Optional integrations provide proper scoring rules, sensitivity analysis, adaptive search, surrogate models and model weighting. Fixed or adaptive replication and provenance-checked result bundles make the study contract explicit; calibration, power and transfer to observational data still need application-specific evidence.
 
 [Documentation and executable examples](https://jcm-sci.github.io/trade-study/guide/capabilities/).
+
+## [op_infer](https://jcmacdonald.dev/projects/inference_calibration/)
+
+**Status: Private pre-alpha · Unreleased · Active development**
+
+The statistical layer of the op stack connects Bayesian fitting through established inference libraries, simulation-based calibration and replicated study-design checks. Working implementations build on the simulation and evaluation tools; broader interfaces and application-specific validation remain in development.
 
 ## [pp-eigentest](https://jcmacdonald.dev/projects/pp_eigentest/)
 
