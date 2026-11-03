@@ -2,9 +2,9 @@
 
 I'm Josh, an Assistant Scientist in the Department of International Health at the Johns Hopkins Bloomberg School of Public Health.
 
-I study how models can inform interventions, surveillance, and data collection when the underlying system is only partly observed. I develop simulation, Bayesian inference, numerical methods, and model-evaluation software for health, environmental, and earth sciences. A recurring question is how assumptions about the system and its measurements affect the conclusions we draw.
+My research asks how processes within hosts shape immune response and protection, how they link to transmission between hosts, and how movement, contact, and ecological change shape spread and persistence across populations. I develop mechanistic models, inference methods, and open research software for these questions and for decisions under uncertainty.
 
-Applications include infectious disease forecasting and intervention timing, surveillance design, marine and terrestrial ecology, and cultural transmission dynamics. The infectious disease tools contribute to CDC-funded multi-model scenario evidence used for public-health planning; other applications include wildlife disease surveillance design in sub-Saharan Africa and cross-scale ecological modeling.
+Established work spans human infectious disease, livestock and wildlife health, ecology, and cultural transmission. Developing work extends the same multiscale approach to longitudinal clinical data and to the design of experiments, studies, monitoring programs, and surveillance. The infectious disease tools contribute to CDC-funded multi-model scenario evidence used for public-health planning.
 
 | Research area                   | Related tools                                                                                                                                                               |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,8 +19,11 @@ Applications include infectious disease forecasting and intervention timing, sur
 ## Research in progress
 
 - **[Structural scores](https://jcmacdonald.dev/projects/current_analyses/#structural-scores-and-scientific-prediction).** Assessing predictions against declared scientific constraints, including checks before outcomes are observed.
-- **[Inference and calibration with op_infer](https://jcmacdonald.dev/projects/inference_calibration/).** Research software for Bayesian fitting, simulation-based calibration and replicated study-design checks. It remains private, pre-alpha and unreleased while application studies continue.
+- **[Inference and calibration with op_infer](https://jcmacdonald.dev/projects/inference_calibration/).** Public pre-alpha research software for Bayesian fitting, simulation-based calibration and replicated study-design checks. It is unreleased on PyPI while broader interfaces and application-specific validation develop.
 - **[Scientific applications](https://jcmacdonald.dev/projects/current_analyses/#application-studies).** Dengue within-host dynamics, COVID-19 observation noise, diphtheria vaccination and CCHF surveillance.
+- **[Proposed clinical direction](https://jcmacdonald.dev/projects/#study-systems).** Longitudinal research on immune response and later infection after influenza vaccination, with older adults as the initial focus. This is proposal-stage work; no study is active and no clinical findings are reported.
+
+In 2027 I will participate in the competitive, unpaid Scholar program of Duke University's [Center of Excellence for Multiscale Immune Systems Modeling](https://immunescale.org/). The program provides mentorship and training but no salary or stipend.
 
 These summaries describe research questions and aims. Public papers and artifacts are linked as they become available.
 
@@ -30,9 +33,9 @@ These summaries describe research questions and aims. Public papers and artifact
 
 ## [VBPCApy](https://github.com/yoavram-lab/VBPCApy) · [![CI](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml/badge.svg)](https://github.com/yoavram-lab/VBPCApy/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/vbpca-py)](https://pypi.org/project/vbpca-py/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19389250.svg)](https://doi.org/10.5281/zenodo.19389250)
 
-Released on PyPI. JOSS submission in preparation.
+Released on PyPI.
 
-Variational Bayesian PCA for incomplete cultural, genetic, and survey data. The package models observed entries directly and estimates uncertainty through a variational posterior. It provides component pruning, model-selection tools, C++ kernels, and a scikit-learn-compatible API. It was used in [Macdonald et al. (2024, _Evolutionary Human Sciences_)](https://doi.org/10.1017/ehs.2024.45). Current work focuses on testing, packaging, and a JOSS submission.
+Variational Bayesian PCA for incomplete cultural, genetic, and survey data. The package models observed entries directly and estimates uncertainty through a variational posterior. It provides component pruning, model-selection tools, C++ kernels, and a scikit-learn-compatible API. It was used in [Macdonald et al. (2024, _Evolutionary Human Sciences_)](https://doi.org/10.1017/ehs.2024.45). Current work focuses on testing, qualification, packaging, and maintenance.
 
 ## [op_engine](https://github.com/ACCIDDA/op_engine) · [![CI](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yaml/badge.svg)](https://github.com/ACCIDDA/op_engine/actions/workflows/ci.yaml) [![Docs](https://img.shields.io/badge/docs-online-blue)](https://accidda.github.io/op_engine/)
 
@@ -50,15 +53,15 @@ Declarative specification language and compiler for PDE/structured-field, nonloc
 
 Released on PyPI.
 
-Compares simulation configurations against competing objectives. It builds design grids, runs replicated studies in phases, compares designs with shared random numbers, and reports Pareto fronts, regret and practical equivalence under specified preferences. Optional integrations add scoring rules, sensitivity analysis, adaptive search, surrogate models and model weighting. Results retain replicate counts, uncertainty assumptions and provenance. Calibration, power and applicability to observed data need separate assessment.
+Compares model settings, experiments, studies, and surveillance plans against competing objectives. It builds design grids, runs replicated studies in phases, compares designs with shared random numbers, and reports Pareto fronts, regret and practical equivalence under specified preferences. Optional integrations add scoring rules, sensitivity analysis, adaptive search, surrogate models and model weighting. Results retain replicate counts, uncertainty assumptions and provenance. Calibration, power and applicability to observed data need separate assessment.
 
 [Documentation and executable examples](https://jcm-sci.github.io/trade-study/guide/capabilities/).
 
-## [op_infer](https://jcmacdonald.dev/projects/inference_calibration/)
+## [op_infer](https://github.com/ACCIDDA/op_infer)
 
-Private pre-alpha research software. Unreleased.
+Public pre-alpha research software. Unreleased on PyPI.
 
-Connects Bayesian fitting through established inference libraries, simulation-based calibration and replicated study-design checks. The implementation uses the simulation and evaluation tools above. Broader interfaces and application studies remain in development.
+Connects Bayesian fitting through established inference libraries, simulation-based calibration and replicated study-design checks. The implementation uses the simulation and evaluation tools above. Broader interfaces and application studies remain in development; operational data, partner discussions, and application materials remain private. See the [project summary](https://jcmacdonald.dev/projects/inference_calibration/).
 
 ## [pp-eigentest](https://jcmacdonald.dev/projects/pp_eigentest/)
 
@@ -88,9 +91,9 @@ MIDAS Network coordination hub for CDC-funded influenza scenario modeling. Contr
 
 Lead model developer for ACCIDDA's CDC-funded seasonal influenza scenario modeling across the 2024/25, 2025/26, and 2026/27 seasons. Set up the ACCIDDA flu model and operational pipeline (2024/25). Work with external modeling packages informed my contributions to FlepiMoP2 (2025/26). Supervising an undergraduate student on revisions to the flu model (2026/27). These contributions form part of the multi-model evidence produced by the CDC Flu Scenario Modeling Hub for public-health planning.
 
-## Hib Vaccination Modeling (Navajo Nation, Current)
+## Hib Vaccination Modeling (Current)
 
-Technical lead supervising implementation of an age- and immune-status-structured Hib model for the Navajo Nation to evaluate the impact of long-running vaccination programs.
+Technical supervisor for PhD students implementing an age- and immune-status-structured Hib model to evaluate long-running vaccination programs in a partner-defined population. Public descriptions remain general pending approval from participating organizations.
 
 ---
 
@@ -107,7 +110,7 @@ Profiling the [FlepiMoP](https://www.flepimop.org) backend informed the design o
 - COVID-19 observation-noise sensitivity experiments
 - Diphtheria outbreak-vaccination modeling
 - CCHF surveillance and control design across wildlife and livestock systems
-- VBPCApy package hardening and JOSS manuscript preparation
+- VBPCApy package qualification and maintenance
 
 ---
 
