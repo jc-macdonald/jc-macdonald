@@ -4,18 +4,18 @@ I'm Josh, an Assistant Scientist in the Department of International Health at th
 
 My research asks how processes within hosts shape immune response and protection, how they link to transmission between hosts, and how movement, contact, and ecological change shape spread and persistence across populations. I develop mechanistic models, inference methods, and open research software for these questions and for decisions under uncertainty.
 
-Established work spans human infectious disease, livestock and wildlife health, ecology, and cultural transmission. Developing work extends the same multiscale approach to longitudinal clinical data and to the design of experiments, studies, monitoring programs, and surveillance. The infectious disease tools contribute to CDC-funded multi-model scenario evidence used for public-health planning.
+My work spans human infectious disease, livestock and wildlife health, ecology, and cultural transmission. The infectious disease tools contribute to CDC-funded multi-model scenario evidence used for public-health planning.
 
 🌐 [jcmacdonald.dev](https://jcmacdonald.dev) · [Publications](https://jcmacdonald.dev/publications/) · [CV](https://jcmacdonald.dev/cv/) · [@jcm-sci](https://github.com/jcm-sci)
 
 ## Research in progress
 
-- **[Proposed clinical direction](https://jcmacdonald.dev/projects/#proposed-clinical-direction).** My influenza scenario-modeling work requires assumptions about individual immune responses that population hospital admissions do not directly measure. I am developing a mentored clinical-research proposal on antibody responses after influenza vaccination in adults over 75: how they rise and decline, and whether the previous season's antibody trajectory improves prediction of the current season's response beyond the current pre-vaccination titer. Clinical and laboratory training would support this work; relating antibody trajectories to protection is a later question.
 - **[Scenario-model evaluation](https://jcmacdonald.dev/projects/current_analyses/#constraint-checks-for-predictions).** Studying whether declared checks of scenario-model submissions reveal consequential inconsistencies. Their predictive usefulness remains an empirical question.
-- **[Inference and calibration with op_infer](https://jcmacdonald.dev/projects/inference_calibration/).** Public pre-alpha research software for Bayesian fitting, simulation-based calibration and replicated study-design checks. It is unreleased on PyPI while broader interfaces and application-specific validation develop.
 - **[Scientific applications](https://jcmacdonald.dev/projects/current_analyses/#application-studies).** Dengue within-host dynamics, COVID-19 observation noise, diphtheria vaccination and CCHF surveillance.
+- **[Inference and calibration with op_infer](https://jcmacdonald.dev/projects/inference_calibration/).** Public pre-alpha research software for Bayesian fitting, simulation-based calibration and replicated study-design checks. It is unreleased on PyPI while broader interfaces and application-specific validation develop.
+- **[Research interests](https://jcmacdonald.dev/projects/).** Antibody responses after influenza vaccination in older adults.
 
-In 2027 I will participate in the unpaid, virtual Scholar program of Duke University's [Center of Excellence for Multiscale Immune Systems Modeling](https://immunescale.org/). The program provides mentorship and training but no salary or stipend.
+In 2027, I will participate in Duke University's [Multiscale Immune Systems Modeling Scholars Program](https://immunescale.org/).
 
 Public papers and artifacts are linked as they become available.
 
